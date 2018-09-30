@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Sticky Navbar with JQuery</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/sticy_nav.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <div class="menu-icon">
+                    <i class="fa fa-bars fa-2x"></i>
+                </div>
+                <div class="logo">LOGO</div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="content">
+            <p>
+                All previous large cruise liners have relied on centuries-old shipbuilding principles that require a solid hull to hold the vessel together. By shifting the spine to the center, Celebrity Edge's sides have been opened up -- allowing maximum light and the potential to create suites with incredible panoramic ocean views.
+            </p>
+            <p>
+                All previous large cruise liners have relied on centuries-old shipbuilding principles that require a solid hull to hold the vessel together. By shifting the spine to the center, Celebrity Edge's sides have been opened up -- allowing maximum light and the potential to create suites with incredible panoramic ocean views.
+            </p>
+            <p>
+                All previous large cruise liners have relied on centuries-old shipbuilding principles that require a solid hull to hold the vessel together. By shifting the spine to the center, Celebrity Edge's sides have been opened up -- allowing maximum light and the potential to create suites with incredible panoramic ocean views.
+            </p>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('.menu-icon').on('click', function(){
+            $('nav ul').toggleClass("showing")
+        })
+    })
+
+    $(window).on('scroll', function(){
+        if($(window).scrollTop()) {
+            $('nav').addClass('black');
+        }
+        else {
+            $('nav').removeClass('black');
+        }
+    })
+    </script>
+</body>
+</html>

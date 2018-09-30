@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rsponsive Animated Canvas Menu</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/offcanvas.css">
+</head>
+<body>
+    <div class="page">
+        <span class="menu_toggle">
+            <i class="menu_open fa fa-bars fa-lg"></i>
+            <i class="menu_close fa fa-times fa-lg"></i>
+        </span>
+        <ul class="menu_items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <main class="content">
+            <div class="content_inner">
+                <h1>Responsive Animated Off Canvas Menu</h1>
+                <p>All previous large cruise liners have relied on centuries-old shipbuilding principles that require a solid hull to hold the vessel together. By shifting the spine to the center, Celebrity Edge's sides have been opened up -- allowing maximum light and the potential to create suites with incredible panoramic ocean views.</p>
+            </div>
+        </main>
+    </div>
+
+    <script type="text/javascript">
+        var $page = $('.page');
+
+        $('.menu_toggle').on('click', function() {
+            $page.toggleClass('shazam')
+        });
+        $('.content').on('click', function() {
+            $page.removeClass('shazam')
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animated Accordion</title>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <style>
+        * {margin:0; padding:0; box-sizing: border-box }
+        body { background-color: #48478A;}
+        /* Center nav */
+        nav {position: absolute; top:50%; left:50%; transform: translate(-50%, -50%)}
+        a { 
+            color: #fff; text-align: center; text-decoration: none; width: 120px; 
+            padding:1em 0;display: inline-block; font-weight: bold;transition:  all .4s ease-in-out;
+        }
+        .line {width: 120px; height:3px; background-color: #fff;}
+        a:nth-child(2):hover ~ .line {transform: translate(123px);transition:  all .4s ease-in-out;background-color: tomato}
+        a:nth-child(2):hover {color:tomato}
+        a:nth-child(3):hover ~ .line {transform: translate(246px);transition:  all .4s ease-in-out;background-color: yellow}
+        a:nth-child(3):hover {color:yellow}
+        a:nth-child(4):hover ~ .line {transform: translate(369px);transition:  all .4s ease-in-out;background-color: skyblue}
+        a:nth-child(4):hover {color:skyblue}
+    </style>
+    <script>
+        $(function() {
+
+        });
+        
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#" class="on">Blog</a>
+        <a href="#">Contact</a>
+        <div class="line"></div>
+    </nav>
+    
+</body>
+</html>

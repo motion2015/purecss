@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animated Accordion</title>
+    
+    <style>
+        html {margin: 0; padding: 0; width: 100%;}
+        body {margin:0; padding: 0; width:100%; height:100%;font-family: Source Sans Pro;}
+        .wrapper { margin: 50px auto; font-weight: 400; text-align: center;}
+        h1 { font-weight: lighter; font-size:70px}
+        button.accordion {
+            background: #DD1C1A; color: #fff; cursor: pointer; border: 0px; 
+            padding: 18px; width: 70%; text-align:left; font-size: 18px; transition: .4s;
+        }
+        button:focus {outline: none;}
+        button.accordion.active, button.accordion:hover {background: #9B0A07}
+        div.panel {padding:0 18px; color:#000; max-height:0; overflow: hidden; width: 67.45%; margin: 0 auto; transition: max-height .2s ease-out}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Animated Accordian</h1>
+        <button class="accordion" type="button">Section 1</button>
+        <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec elit urna. Suspendisse a erat a nibh imperdiet fermentum. In eleifend ultricies massa, id pretium purus convallis nec. </p>
+        </div>
+        <button class="accordion" type="button">Section 2</button>
+        <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec elit urna. Suspendisse a erat a nibh imperdiet fermentum. In eleifend ultricies massa, id pretium purus convallis nec. </p>
+        </div>
+        <button class="accordion" type="button">Section 3</button>
+        <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec elit urna. Suspendisse a erat a nibh imperdiet fermentum. In eleifend ultricies massa, id pretium purus convallis nec. </p>
+        </div>
+    </div>
+    <script>
+        var acc = document.getElementsByClassName('accordion');
+        var i;
+        for(i=0; i < acc.length; i++) {
+            acc[i].onclick = function() {
+                this.classList.toggle('active');
+
+                var panel = this.nextElementSibling;
+
+                if(panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                }
+                else {
+                    panel.style.maxHeight =  panel.scrollHeight + 'px';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
