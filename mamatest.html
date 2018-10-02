@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{box-sizing: border-box}
+
+
+    .progress2{width:100%; background-color: #e6e6e6;height:36px;line-height: 36px; border-radius:36px;}
+    .progress2 li{position:relative;list-style:none;display:inline-block;text-align:center;height:36px;line-height: 36px;}
+    .progress2 li:after{content:'';position:absolute;display: inline-block;width:28px;height:1px;background-color: #c8c8c8;    top: 50%;
+    left: 24px;}
+    .progress2 li a{position:relative;top: 50%;transform:translateY(-50%);
+	display:inline-block;font-size:12px;width:24px;height:24px;border-radius: 24px;background-color:#fff; border:1px solid #c8c8c8 }
+    .progress2 li a span{position:absolute;top: 50%;transform:translateY(-50%);width:100%; left:0}
+    .progress2 li.finish a{color:#fff;background-color:#e3007b; border:1px solid #e3007b}
+    .progress2 li.on a{color:#e3007b;background-color:#fff; border:1px solid #e3007b
+    /*  border: 5px solid rgba(244,244,34,.2);
+    width:42px;height:42px; */
+    }
+    .progress2 li.on{width:44px;}
+    .progress2 li.on:after{left:41px;}
+    .progress2 li.on:before{content: url(pureimg/progress2.png);
+    z-index: 0;
+    position: absolute;
+    
+    top: -2px;
+    left: 0px;
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    /* left: -6px;background: url(pureimg/progress.png) no-repeat 6px -86px; padding-left: 15px;*/
+    }
+    .progress2 li.on a:before{content:'';position:absolute;display: inline-block;width:42px;height:42px;border-radius: 100%;}
+   </style>
+</head>
+<body>
+
+
+    <ul class="progress2">
+            <li class="finish"><a href="#"><span>1</span></a></li>
+            <li class="finish"><a href="#"><span>2</span></a></li>
+            <li class="finish"><a href="#"><span>3</span></a></li>
+            <li class="finish"><a href="#"><span>4</span></a></li>
+            <li><a href="#"><span>5</span></a></li>
+            <li class="on"><a href="#"><span>6</span></a></li>
+            <li><a href="#"><span>7</span></a></li>
+            <li><a href="#"><span>8</span></a></li>
+            <li class="on"><a href="#"><span>9</span></a></li>
+            <li><a href="#"><span>10</span></a></li>
+        </ul>
+</body>
+</html>
