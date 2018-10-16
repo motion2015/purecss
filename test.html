@@ -7,7 +7,10 @@
     <title>Document</title>
     <script>
         //디데이 종료 일자 설정 
-        var countDownDate = new Date("DEC 10, 2018 00:00:00").getTime(); 
+        var countDownDate = new Date("DEC 10, 2018 19:00:00").getTime(); 
+        var countDownDate2 = new Date("DEC 10, 2018 18:00:00").getTime();
+        var countDownDate3 = new Date("DEC 19, 2018 19:00:00").getTime();
+        var countDownDate4 = new Date("DEC 14, 2018 18:00:00").getTime();
     
     //1초마다 갱신되도록 함수 생성,실행 
     var x = setInterval(function() { 
@@ -15,19 +18,45 @@
         now = new Date().getTime(); 
         // 종료일자에서 현재일자를 뺀 시간 
         var distance = countDownDate - now; 
+        var distance2 = countDownDate2 - now; 
+        var distance3 = countDownDate3 - now; 
+        var distance4 = countDownDate4 - now; 
         // 각 변수에 일, 시, 분, 초를 등록 
         var d = Math.floor(distance / (1000 * 60 * 60 * 24)); 
         var h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); 
         var m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)); 
-        var s = Math.floor((distance % (1000 * 60)) / 1000); 
+        var s = Math.floor((distance % (1000 * 60)) / 1000);
+
+        var d2 = Math.floor(distance2 / (1000 * 60 * 60 * 24)); 
+        var h2 = Math.floor((distance2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); 
+        var m2 = Math.floor((distance2 % (1000 * 60 * 60)) / (1000 * 60)); 
+        var s2 = Math.floor((distance2 % (1000 * 60)) / 1000);
+
+        var d3 = Math.floor(distance3 / (1000 * 60 * 60 * 24)); 
+        var h3 = Math.floor((distance3 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); 
+        var m3 = Math.floor((distance3 % (1000 * 60 * 60)) / (1000 * 60)); 
+        var s3 = Math.floor((distance3 % (1000 * 60)) / 1000);
+
+        var d4 = Math.floor(distance4 / (1000 * 60 * 60 * 24)); 
+        var h4 = Math.floor((distance4 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); 
+        var m4 = Math.floor((distance4 % (1000 * 60 * 60)) / (1000 * 60)); 
+        var s4 = Math.floor((distance4 % (1000 * 60)) / 1000); 
         //id가 d-day인 HTML코드에 내용 삽입 
-        document.getElementById("d-day").innerHTML = "<i>" + d +"</i><i> " + h + "</i><i> " + m + "</i><i> " + s + "</i>"; });
+        document.getElementById("d-day").innerHTML = "<i>" + d +"</i><i> " + h + "</i><i> " + m + "</i><i> " + s + "</i>"; 
+        document.getElementById("d-day2").innerHTML = "<i>" + d2 +"</i><i> " + h2 + "</i><i> " + m2 + "</i><i> " + s2 + "</i>"; 
+        document.getElementById("d-day3").innerHTML = "<i>" + d3 +"</i><i> " + h3 + "</i><i> " + m3 + "</i><i> " + s3 + "</i>"; 
+        document.getElementById("d-day4").innerHTML = "<i>" + d4 +"</i><i> " + h4 + "</i><i> " + m4 + "</i><i> " + s4 + "</i>"; 
+    
+    });
     </script>
 </head>
 <body>
 
 
         <div id="d-day"></div>
+        <div id="d-day2"></div>
+        <div id="d-day3"></div>
+        <div id="d-day4"></div>
     
 
 </body>
