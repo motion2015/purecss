@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-density-dpi=medium-dpi">
+<title>Bitnami: Open Source. Simplified</title>
+<!-- <link href="bitnami.css" media="all" rel="Stylesheet" type="text/css" /> -->
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<style>
+* {margin: 0;padding: 0;box-sizing: border-box;}
+/* Define Layout */
+/* #wrap {width: 100%;margin: 0 auto;padding: 10px;border: 1px solid #bdbdbd;background-color: #f7f7f7;}
+#wrap p {font-weight: bold;}
+#header,
+#container,
+#footer {padding: 15px;background-color: #e5e5e5;border: 1px solid #bfbfbf;margin-bottom: 10px;color: #2d2d2d;
+font-family:Tahoma;font-size: 14px;
+} */
+/* #header {padding: 10px;margin-top: 10px;}
+#container:before,
+#container:after {display: table;content:""}
+#container:after {clear: both;}
+.snb, #content {margin-top: 10px;background-color: #fff;border: 1px solid #bdbdbd;text-align: center;}
+.snb {float: left;width: 20%;height: auto;}
+#content {float: right;width: 70%;padding: 0 10px 10px 10px;text-align: left;height: auto;} */
+
+/**
+* ==============================+
+* Style : layer-popup
+* ==============================+
+*/
+#container{height:2400px}
+#content {height: 100%;}
+.layer-wrap {display: none;position: fixed;left: 0;right: 0;top: 0;bottom: 0;text-align: center;background-color: rgba(0, 0, 0, 0.7);}
+.layer-wrap:before {content: "";display: inline-block;height: 100%;
+vertical-align: top;
+margin-right: -.25em;}
+.pop-layer {position: relative;display: inline-block;
+vertical-align: middle;
+width: 80%;height: auto;
+background-color: #fff;z-index: 10;font-family:Tahoma;}
+.pop-layer .pop-container {padding: 20px 25px;}
+/* .pop-layer .btn-r {width: 100%;margin: 10px 0 20px;padding-top: 10px;border-top: 1px solid #DDD;text-align: right;} */
+a.btn-layerClose {display: block;position: absolute;right: 15px;top: 17px;width: 11.5px;height: 11.5px;
+background: url(http://d1taqh6whn4eh1.cloudfront.net/mobile/images/ui/btn_lp_close.png) center center no-repeat;
+background-size: 100% auto;text-indent: 9999px;}
+</style>
+<script>
+  $(function() {
+    $('.btn-layer').on('click', function() {
+      var target = $(this).attr('href');
+      $(target).fadeIn();
+      alert($('.layer-wrap').height());
+      
+    });
+    $('.btn-layerClose').on('click', function() {
+      $('.layer-wrap').fadeOut();
+    });
+  }); 
+</script>
+</head>
+<body>
+<div id="wrap">
+    <p>#wrap</p>
+    <!-- Start : header -->
+    <div id="header"><p>#header</p></div>
+    <!-- End : header -->
+    <!-- container -->
+    <div id="container">
+        <p>#container</p>
+        <!-- snb -->
+        <div class="snb"><p>.snb</p></div>
+        <!-- // snb -->
+        <!-- Start : content -->
+        <div id="content">
+            <p>#content</p><br>
+            <div>
+                Lorem ipsum dolor sit amet,etur adipisicing elit. Ipsa, repudiandae? <br> 
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, repudiandae? <br> 
+                Lorem ipsum dolor sit tetur adipisicing elit. udiandae? <br>
+                 Lorem ipsum dolor sit tetur adipisicing
+                elit. Ipsa, repudiandae? <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, repudiandae? <br><br>
+                <a href="#layer" class="btn-layer">레이어 팝업보기</a>
+            </div>
+        </div>
+        <!-- End : content -->
+    </div>
+    <!-- // container -->
+    <!-- Start : footer -->
+    <div id="footer"><p>#footer</p></div>
+    <!-- End : footer -->
+</div>
+
+<!-- Start : layer-popup content -->
+<div id="layer" class="layer-wrap">
+    <div class="pop-layer">
+        <div class="pop-container">
+            <div class="pop-conts">
+                <!--content //-->
+                <p class="ctxt mb20">
+                    Thank you.<br> 
+                    Your registration was submitted successfully.<br> 
+                    Selected invitees will be notified by e-mail on JANUARY 24th.<br><br> 
+                    Hope to see you soon!
+                </p>
+
+                <!-- <div class="btn-r"> -->
+                    <a href="#" class="btn-layerClose">Close</a>
+                <!-- </div> -->
+                <!--// content-->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End : layer-popup content -->
+</body>
+</html>
